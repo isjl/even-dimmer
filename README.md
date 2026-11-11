@@ -31,7 +31,9 @@ brew install --cask isjl/tap/even-dimmer
 
 Or [download the latest version](../../releases/latest), unzip it, and drag **Even Dimmer** into Applications.
 
-Then open **Even Dimmer** from your Applications folder, Spotlight or Launchpad. It lives in the menu bar, near the clock, and doesn't show in the Dock. To start it every time you log in, turn on **Open at login** in its Settings.
+Then open **Even Dimmer** from your **Applications** folder in Finder, or run `open -a "Even Dimmer"` in Terminal. It lives in the menu bar, near the clock, and doesn't show in the Dock. To start it every time you log in, turn on **Open at login** in its Settings.
+
+> Spotlight can be slow to list newly installed apps. If searching for "Even Dimmer" finds nothing, open it from Applications instead; after your next restart it shows up in Spotlight too.
 
 > **First launch:** Even Dimmer isn't from the App Store, so if you downloaded it by hand, macOS may say it "can't be opened". Go to **System Settings → Privacy & Security** and click **Open Anyway**. You only need to do this once. Homebrew installs skip this step.
 
