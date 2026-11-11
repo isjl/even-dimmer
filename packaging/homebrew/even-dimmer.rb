@@ -3,8 +3,8 @@
 # people can install with:
 #   brew install --cask isjl/tap/even-dimmer
 cask "even-dimmer" do
-  version "1.0.0"
-  sha256 "071ddf5b84594bc522cfa51b2d4a5e612f650a3978dc216815a4633543ea63bd"
+  version "1.0.1"
+  sha256 "ec31101514124175cb2dbd239529823a887e352319063ae856189a94cdec98dd"
 
   url "https://github.com/isjl/even-dimmer/releases/download/v#{version}/EvenDimmer-#{version}.zip"
   name "Even Dimmer"
