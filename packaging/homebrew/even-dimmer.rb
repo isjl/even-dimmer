@@ -18,15 +18,17 @@ cask "even-dimmer" do
 
   # The app updates itself with Sparkle.
   auto_updates true
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "Even Dimmer.app"
 
   # The app isn't notarized, so remove the download quarantine flag; otherwise macOS
   # refuses to open it. Only do this for apps you trust.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/Even Dimmer.app"]
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:           ["-dr", "com.apple.quarantine", "{{appdir}}/Even Dimmer.app"],
+        writable_paths: ["Even Dimmer.app"],
+        writable_base:  :appdir
   end
 
   uninstall quit: "io.github.evendimmer"
