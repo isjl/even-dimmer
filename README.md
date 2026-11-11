@@ -1,4 +1,6 @@
-# Even Dimmer
+<p align="center"><img src="docs/images/icon.png" width="128" alt="Even Dimmer icon: a sun turning into a crescent moon, its rays fading like a dimmer dial"></p>
+
+<h1 align="center">Even Dimmer</h1>
 
 **Your MacBook's lowest brightness is still too bright. Even Dimmer goes lower.**
 
@@ -29,13 +31,15 @@ brew install --cask isjl/tap/even-dimmer
 
 Or [download the latest version](../../releases/latest), unzip it, and drag **Even Dimmer** into Applications.
 
-> **First launch:** Even Dimmer isn't from the App Store, so macOS may say it "can't be opened". Go to **System Settings → Privacy & Security** and click **Open Anyway**. You only need to do this once.
+Then open **Even Dimmer** from your Applications folder, Spotlight or Launchpad. It lives in the menu bar, near the clock, and doesn't show in the Dock. To start it every time you log in, turn on **Open at login** in its Settings.
+
+> **First launch:** Even Dimmer isn't from the App Store, so if you downloaded it by hand, macOS may say it "can't be opened". Go to **System Settings → Privacy & Security** and click **Open Anyway**. You only need to do this once. Homebrew installs skip this step.
 
 To get new versions automatically, turn on **Check for updates automatically** in Settings. It's off by default.
 
 ## Using it
 
-Click the Even Dimmer icon in the menu bar.
+Click the Even Dimmer icon in the menu bar (a small sun).
 
 - **Screen**: drag left of the **Apple's lowest** mark for extra dim. Night Shift's warmth is right there too.
 - **Keyboard**: dim the keyboard light below Apple's lowest step, or switch it off.

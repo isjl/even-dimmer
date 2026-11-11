@@ -24,7 +24,11 @@ rm -rf "$APP" build/EvenDimmer.zip
 mkdir -p "$APP/Contents/MacOS" "$APP/Contents/Resources" "$APP/Contents/Frameworks"
 cp "$BIN" "$APP/Contents/MacOS/EvenDimmer"
 cp Resources/Info.plist "$APP/Contents/Info.plist"
-[ -f Resources/AppIcon.icns ] && cp Resources/AppIcon.icns "$APP/Contents/Resources/" || true
+# App icon: compile the Icon Composer package (native icon on macOS 26+, plus a classic
+# AppIcon.icns for older macOS). Regenerate the package with scripts/make_icon.py.
+xcrun actool Resources/AppIcon.icon --compile "$APP/Contents/Resources" \
+  --platform macosx --minimum-deployment-target 13.0 --app-icon AppIcon \
+  --output-partial-info-plist build/icon-partial.plist >/dev/null
 ditto "$SPARKLE" "$APP/Contents/Frameworks/Sparkle.framework"
 
 if [ -n "${SPARKLE_PUBLIC_KEY:-}" ]; then
